@@ -1,0 +1,11 @@
+.nav_text {
+    color: #757575;
+}
+
+.nav_text:hover {
+    color: black;
+}
+
+.active {
+    color: black;
+}
