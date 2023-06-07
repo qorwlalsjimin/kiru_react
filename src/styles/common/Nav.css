@@ -1,9 +1,16 @@
 .nav_text {
     color: #757575;
+    cursor: pointer;
 }
 
 .nav_text:hover {
     color: black;
+    transition: 1s ease-out;
+    opacity : 1;
+}
+
+.nav_text:not(:hover) {
+    transition: 1s ease-out;
 }
 
 .active {

@@ -12,10 +12,10 @@ function App(){
           <Navigation/>
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="trad" element={<Item category="110"/>}/>
-            <Route path="imporv" element={<Item category="120"/>}/>
-            <Route path="shoes" element={<Item category="130"/>}/>
-            <Route path="acc" element={<Item category="140"/>}/>
+            <Route path="trad" element={<Item category_id="110"/>}/>
+            <Route path="imporv" element={<Item category_id="120"/>}/>
+            <Route path="shoes" element={<Item category_id="130"/>}/>
+            <Route path="acc" element={<Item category_id="140"/>}/>
           </Routes>
         </BrowserRouter>
       </>

@@ -14,7 +14,7 @@ function Navigation() {
             <NavLink className="nav_text pe-4" to="trad" style={{ textDecoration: 'none' }}>전통</NavLink>
             <NavLink className="nav_text pe-4" to="imporv" style={{ textDecoration: 'none' }}>개량</NavLink>
             <NavLink className="nav_text pe-4" to="shoes" style={{ textDecoration: 'none' }}>신발</NavLink>
-            <NavLink className="nav_text" to="acc" style={{ textDecoration: 'none' }}>악세사리</NavLink>
+            <NavLink className="nav_text" to="acc" style={{ textDecoration: 'none' }}>악세서리</NavLink>
           </Col>
         </Row>
       {/* <Form className="d-flex">
