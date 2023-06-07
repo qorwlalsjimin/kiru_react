@@ -1,0 +1,37 @@
+/*상품 하나*/
+.product {
+    margin-top: 100px;
+    width: 25%; 
+}
+.product img {
+    width: 320px;
+}
+
+.product a {
+    text-decoration: none;
+}
+
+.product p{
+    color: #9F9F9F;
+    font-size: 16px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.product span{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 4px;
+}
+
+.product .wish {
+    width: 24px;
+    height: 24px;
+}
+
+/* 상품 목록 */
+.item_list{
+    display: flex;
+}

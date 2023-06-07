@@ -2,9 +2,12 @@ import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemNavigation from '../components/ItemNavigation';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Product from '../components/Product';
+import '../styles/common/Item.css';
 
-export default function Item({category_id}) {
+export default function ItemList({category_id}) {
   /* 카테고리 id로 이름 넣어주기 */
   let category_name;
   switch (category_id) {
@@ -26,18 +29,16 @@ export default function Item({category_id}) {
   }
 
   /* api로 상품 목록 받아오기 */
+  const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`/api/item/item_list/${category_id}`)
-      .then(res => res.json())
-      .then(datas => {
-        console.log(datas);
-        for(let data of datas){
-          console.log(data.name, data.price, 
-            data.category.title, data.heart);
-
-        }
+    axios.get(`/api/item/item_list/${category_id}`)
+      .then((datas) => {
+        setItems(datas.data);
       });
-  }, []);
+  }, [setItems]);
+
+  console.log("여기");
+  console.log(items);
 
   return (
     <>
@@ -45,7 +46,12 @@ export default function Item({category_id}) {
         <Row>
           <Col md={12} className="d-flex justify-content-center mt-5">{category_name}</Col>
           <Col className="d-flex justify-content-center mt-3"><ItemNavigation/></Col>
-
+        </Row>
+        <Row className="item_list">
+          {/* 상품 목록 */}
+          {items.map((item)=>{
+            return <Product/>
+          })}
         </Row>
       </Container>
     </>
