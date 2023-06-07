@@ -6,8 +6,9 @@ import { useState } from 'react';
 
 export default function ItemNavigation() {
 
+  let isActive;
   const giveActive = () => {
-    console.log("Click!");
+    isActive = true;
   };
 
   return (
@@ -15,7 +16,7 @@ export default function ItemNavigation() {
     <Container fluid className="d-flex justify-content-center">
         <Row >
           <Col md={12} className="d-flex justify-content-center">
-            <p className="nav_text pe-5" onClick={giveActive} style={{ textDecoration: 'none' }}>All</p>
+            <p className={(isActive?"active":"") + "nav_text pe-5"} onClick={giveActive} style={{ textDecoration: 'none' }}>All</p>
             <p className="nav_text pe-5" onClick={giveActive} style={{ textDecoration: 'none' }}>Best</p>
             <p className="nav_text pe-0" onClick={giveActive} style={{ textDecoration: 'none' }}>Brand</p>
           </Col>

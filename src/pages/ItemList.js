@@ -1,7 +1,6 @@
-import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemNavigation from '../components/ItemNavigation';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from '../components/Product';
@@ -50,7 +49,7 @@ export default function ItemList({category_id}) {
         <Row className="item_list">
           {/* 상품 목록 */}
           {items.map((item)=>{
-            return <Product/>
+            return <Product key={item.itemId}/>
           })}
         </Row>
       </Container>

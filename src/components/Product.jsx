@@ -6,7 +6,7 @@ export default function Product({ item_id }) {
   return (
     <div className='product'>
       <a href='#'>
-        <div class="profile_wrapper">
+        <div className="profile_wrapper">
           <img className="main" src="https://i.postimg.cc/pdWgDHtN/image.png" alt="item image" />
           {/* <img className="wish" src="/images/wish_empty.png" /> */}
         </div>
