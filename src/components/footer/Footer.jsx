@@ -3,39 +3,26 @@ import "./footer.css"
 
 const Footer = () => {
     return (
-
         <footer className="two">
-
             <div className="footerall">
-
                 <div className="ma">
                     <ul className="flex-container">
-
                         <div className="bold">
                             <li className="bo"><sapn style={{ fontWeight: "bold" }}>도와드릴까요?</sapn></li>
-
                             <div className="fontsize">
                                 <li><a href="#"><i className="ri-phone-fill"></i>전화 문의</a></li>
                                 <li><a href="#"><i className="ri-mail-line"></i>문의하기</a></li>
                                 <li><a href="#"><i className="ri-map-pin-fill"></i>수거함 찾기</a></li>
                             </div>
-
-
                         </div>
-
                         <div className="bold">
                             <li className="bo"><sapn style={{ fontWeight: "bold" }}>거래</sapn></li>
-
                             <div className="fontsize">
                                 <li><a href="#">주문 내역</a></li>
                                 <li><a href="#">반품&환불</a></li>
                                 <li><a href="#">FAQ</a></li>
                             </div>
-
                         </div>
-
-
-
 
                         <div className="bold">
                             <li className="bo"><sapn style={{ fontWeight: "bold" }}>입점 브랜드</sapn></li>
@@ -43,10 +30,7 @@ const Footer = () => {
                                 <li><a href="#">기모노 브랜드</a></li>
                                 <li><a href="#">한복 브랜드</a></li>
                             </div>
-
-
                         </div>
-
                         <div className="bold">
                             <li className="bo"><sapn style={{ fontWeight: "bold" }}>법적 고지 및 이용약관</sapn></li>
                             <div className="fontsize">
@@ -55,9 +39,7 @@ const Footer = () => {
                                 <li><a href="#">사업자정보확인</a></li>
                                 <li><a href="#">판매 약관</a></li>
                             </div>
-
                         </div>
-
                     </ul>
                 </div>
 
@@ -68,8 +50,6 @@ const Footer = () => {
                 </div>
 
                 <div className="footunder">
-
-
                     <div className="logogery_img">
                         <img src="images/logogrey.png" alt="" />
                     </div>
@@ -88,11 +68,6 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-
-
-
-
-
 
     )
 }
