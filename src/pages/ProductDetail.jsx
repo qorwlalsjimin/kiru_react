@@ -6,7 +6,7 @@ import { ReactComponent as Star } from "../svgfiles/star.svg";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function ProductDetail() {
+export default function ProductDetail({convertPrice}) {
   const { item_id } = useParams();
   const [product, setProduct] = useState({});
 
@@ -36,7 +36,7 @@ export default function ProductDetail() {
               <span className="title">{product.name}</span>
               <Star margintop="7px"/>
             </div>
-            <span className="price">{product.price}원</span>
+            <span className="price">{convertPrice(product.price)}원</span>
             <p className="desc mt-4 mb-5">{product.description}</p>
 
             <p className="desc-color">색상을 선택해주세요.</p>

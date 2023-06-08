@@ -27,7 +27,7 @@ function App(){
             <Route path="/acc" element={<ProductList category_id="140" convertPrice = {convertPrice}/>}/>
           
             {/* 상품 상세 페이지 */}
-            <Route path="/item/:item_id" element={<ProductDetail/>}/>
+            <Route path="/item/:item_id" element={<ProductDetail convertPrice={convertPrice}/>}/>
           </Routes>
         </BrowserRouter>
       </>
