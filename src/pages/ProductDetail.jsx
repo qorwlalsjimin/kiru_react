@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Accordion,Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/common/Product.css';
 import { useParams } from 'react-router-dom';
@@ -9,6 +9,7 @@ import axios from 'axios';
 export default function ProductDetail({convertPrice}) {
   const { item_id } = useParams();
   const [product, setProduct] = useState({});
+  const [count, setCount] = useState(1);
 
   useEffect(()=>{
     axios.get(`/api/item/${item_id}`).then((data)=>{
@@ -36,12 +37,12 @@ export default function ProductDetail({convertPrice}) {
               <span className="title">{product.name}</span>
               <Star margintop="7px"/>
             </div>
-            <span className="price">{convertPrice(product.price)}원</span>
+            <span className="price">{convertPrice(+product.price)}원</span>
             <p className="desc mt-4 mb-5">{product.description}</p>
 
             <p className="desc-color">색상을 선택해주세요.</p>
             <span className="color-name">옥색</span><br />
-
+            
             <button className="rent">대여신청하기</button>
             <button className="cart">장바구니</button>
           </Col>
