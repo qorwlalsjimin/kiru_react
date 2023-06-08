@@ -8,7 +8,7 @@ function Navigation() {
     <Container fluid className="nav d-flex justify-content-center">
         <Row >
           <Col md={12} className="d-flex justify-content-center">
-            <NavLink to="/" className="my-4"><img src="images/logo.png"/></NavLink>
+            <NavLink to="/" className="my-4"><img src="/images/logo.png"/></NavLink>
           </Col>
           <Col md={12} className="d-flex justify-content-center">
             <NavLink to="/improv" className="nav_text pe-4" style={{ textDecoration: 'none' }}>개량</NavLink>

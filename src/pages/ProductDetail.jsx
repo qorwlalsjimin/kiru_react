@@ -54,11 +54,11 @@ export default function ProductDetail({ convertPrice }) {
           <Col md={1}></Col>
           <Col className="pt-2">{/* text */}
             <div className="d-flex justify-content-between">
-              <span className="title">{product.name}</span>
-              <Star margintop="7px" />
+              <span className="title align-self-center">{product.name}</span>
+              <Star margintop="8px"/>
             </div>
             <span className="price">{convertPrice(+product.price)}원</span>
-            <p className="desc mt-4 mb-5">{product.description}</p>
+            <p className="desc">{product.description}</p>
 
             <p className="desc-color">색상을 선택해주세요.</p>
             <span className="color-name">옥색</span><br />

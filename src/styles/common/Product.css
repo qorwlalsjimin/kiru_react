@@ -50,6 +50,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 38px;
+    margin-bottom: 8px;
 }
 
 .detail .price {
@@ -63,6 +64,9 @@
     font-size: 12px;
     line-height: 19px;
     color: #757575;
+
+    margin-top: 20px;
+    margin-bottom: 56px;
 }
 
 .detail .desc-color {
@@ -70,12 +74,17 @@
     font-size: 12px;
     line-height: 19px;
     color: #424242;
+    margin-bottom: 8px;
 }
 
 .detail .color-name {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+}
+
+select {
+    margin-top: 40px;
 }
 
 .detail button {
