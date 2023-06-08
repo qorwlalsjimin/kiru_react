@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/common/Product.css';
 import { useState } from 'react';
 
-export default function Product({ product }) {
+export default function Product({ product, convertPrice }) {
   return (
     <div className='product'>
       <a href='#'>
@@ -13,7 +13,7 @@ export default function Product({ product }) {
         </div>
         <p>{(product.category.title).split('.')[1]}</p>
         <span>{product.name}</span><br />
-        <span>{product.price}원</span>
+        <span>{convertPrice(product.price)}원</span>
       </a>
     </div>
   );
