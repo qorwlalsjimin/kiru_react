@@ -1,6 +1,6 @@
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/common/Item.css';
+import '../styles/common/Product.css';
 
 export default function Product({ item_id }) {
   return (
