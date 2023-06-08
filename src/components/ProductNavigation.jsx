@@ -1,10 +1,10 @@
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import '../styles/common/Nav.css';
-import { useState } from 'react';
+import { ReactComponent as Circle } from "../svgfiles/circle.svg";
 
-export default function ProductNavigation({category_id}) {
+export default function ProductNavigation({ category_id }) {
   /* 카테고리 id로 이름 넣어주기 */
   let category_name;
   switch (category_id) {
@@ -26,19 +26,32 @@ export default function ProductNavigation({category_id}) {
   }
 
   return (
-    
-    <Container fluid className="d-flex justify-content-center">
-        <Row >
-          <Col md={12} className="d-flex justify-content-center">
-            <NavLink to={category_name+"/all"} className={"nav_text pe-5"} style={{ textDecoration: 'none' }}>All</NavLink>
-            <NavLink to={category_name+"/best"} className={"nav_text pe-5"} style={{ textDecoration: 'none' }}>Best</NavLink>
-            <NavLink to={category_name+"/brand"} className={"nav_text pe-0"} style={{ textDecoration: 'none' }}>Brand</NavLink>
-          </Col>
-        </Row>
-      {/* <Form className="d-flex">
-        <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
-        <Button variant="outline-success">Search</Button>
-      </Form> */}
+    <Container className="nav_container d-flex justify-content-center">
+      <Row className="product">
+        <Col md={12} className="d-flex justify-content-center">
+
+          <NavLink to={"/" + category_name + "/all"} className={"pe-5"} style={{ textDecoration: 'none' }}>
+            <div className="nav_text text-center">
+              <Circle /><br />
+              <span className="first">All</span>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/" + category_name + "/best"} className={"nav_text pe-5"} style={{ textDecoration: 'none' }}>
+            <div className="text-center">
+              <Circle /><br />
+              <span>Best</span>
+            </div>
+          </NavLink>
+
+          <NavLink to={"/" + category_name + "/brand"} className={"nav_text pe-0"} style={{ textDecoration: 'none' }}>
+            <div className="text-center">
+              <Circle /><br />
+              <span>Brand</span>
+            </div>
+          </NavLink>
+        </Col>
+      </Row>
     </Container>
   );
 }

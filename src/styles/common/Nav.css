@@ -1,18 +1,45 @@
-.nav_text {
+/* header의 nav */
+.nav .nav_text {
     color: #757575;
     cursor: pointer;
 }
 
-.nav_text:hover {
-    color: black;
+.nav .nav_text:hover {
+    color: #894DB8;
     transition: 1s ease-out;
     opacity : 1;
 }
 
+/* 공통 */
 .nav_text:not(:hover) {
     transition: 1s ease-out;
 }
 
-.active {
-    color: black;
+.nav .active {
+    color: #894DB8;
 }
+
+/* 상품 목록 안에 nav (All, Best, Brand) */
+.nav_container {
+    height: 50%;
+}
+
+.product .nav_text span, .product circle {
+    color: #757575;
+    fill: #757575;
+    cursor: pointer;
+}
+
+.product .nav_text:hover{
+    background-color: #894DB8;
+    color: #757575;
+    fill: #757575;
+    cursor: pointer;
+} 
+
+.product .nav_text span:hover, .product circle:hover {
+    color: black;
+    fill: black;
+    transition: 1s ease-out;
+    opacity : 1;
+} 

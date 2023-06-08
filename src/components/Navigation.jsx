@@ -5,16 +5,16 @@ import '../styles/common/Nav.css';
 
 function Navigation() {
   return (
-    <Container fluid className="d-flex justify-content-center">
+    <Container fluid className="nav d-flex justify-content-center">
         <Row >
           <Col md={12} className="d-flex justify-content-center">
             <NavLink to="/" className="my-4"><img src="images/logo.png"/></NavLink>
           </Col>
           <Col md={12} className="d-flex justify-content-center">
-            <NavLink className="nav_text pe-4" to="imporv" style={{ textDecoration: 'none' }}>개량</NavLink>
-            <NavLink className="nav_text pe-4" to="trad" style={{ textDecoration: 'none' }}>전통</NavLink>
-            <NavLink className="nav_text pe-4" to="shoes" style={{ textDecoration: 'none' }}>신발</NavLink>
-            <NavLink className="nav_text" to="acc" style={{ textDecoration: 'none' }}>악세서리</NavLink>
+            <NavLink to="/improv" className="nav_text pe-4" style={{ textDecoration: 'none' }}>개량</NavLink>
+            <NavLink to="/trad"   className="nav_text pe-4" style={{ textDecoration: 'none' }}>전통</NavLink>
+            <NavLink to="/shoes"  className="nav_text pe-4" style={{ textDecoration: 'none' }}>신발</NavLink>
+            <NavLink to="/acc"    className="nav_text pe-0" style={{ textDecoration: 'none' }}>악세서리</NavLink>
           </Col>
         </Row>
       {/* <Form className="d-flex">

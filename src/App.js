@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import './styles/common/App.css';
 import ProductList from "./pages/ProductList";
 import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail";
 
 function App(){
   // 상품 금액 1000원 단위로 끊기
@@ -16,11 +17,17 @@ function App(){
         <BrowserRouter>
           <Navigation/>
           <Routes>
+            {/* 메인 */}
             <Route path="/" element={<Home/>}/>
-            <Route path="trad" element={<ProductList category_id="110" convertPrice = {convertPrice}/>}/>
-            <Route path="imporv" element={<ProductList category_id="120" convertPrice = {convertPrice}/>}/>
-            <Route path="shoes" element={<ProductList category_id="130" convertPrice = {convertPrice}/>}/>
-            <Route path="acc" element={<ProductList category_id="140" convertPrice = {convertPrice}/>}/>
+
+            {/* 상품 목록 */}
+            <Route path="/improv" element={<ProductList category_id="120" convertPrice = {convertPrice}/>}/>
+            <Route path="/trad" element={<ProductList category_id="110" convertPrice = {convertPrice}/>}/>
+            <Route path="/shoes" element={<ProductList category_id="130" convertPrice = {convertPrice}/>}/>
+            <Route path="/acc" element={<ProductList category_id="140" convertPrice = {convertPrice}/>}/>
+          
+            {/* 상품 상세 페이지 */}
+            <Route path="/item/:item_id" element={<ProductDetail/>}/>
           </Routes>
         </BrowserRouter>
       </>
