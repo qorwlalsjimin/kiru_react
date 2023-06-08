@@ -1,7 +1,7 @@
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
-import '../styles/common/Nav.css';
+import '../../styles/common/Nav.css';
 
 function Navigation() {
   return (

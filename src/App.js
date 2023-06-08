@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navigation from './components/Navigation';
+import Navigation from './components/header/Navigation';
 import './styles/common/App.css';
 import ProductList from "./pages/ProductList";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
+import Footer from "./components/footer/Footer";
 
 function App(){
   // 상품 금액 1000원 단위로 끊기
@@ -29,6 +30,7 @@ function App(){
             {/* 상품 상세 페이지 */}
             <Route path="/item/:item_id" element={<ProductDetail convertPrice={convertPrice}/>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </>
     )

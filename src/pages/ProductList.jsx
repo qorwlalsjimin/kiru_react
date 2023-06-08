@@ -1,9 +1,9 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProductNavigation from '../components/ProductNavigation';
+import ProductNavigation from '../components/product/ProductNavigation';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Product from '../components/Product';
+import Product from '../components/product/Product';
 import '../styles/common/Product.css';
 
 export default function ProductList({ category_id, convertPrice }) {

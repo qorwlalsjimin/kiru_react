@@ -1,6 +1,6 @@
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/common/Product.css';
+import '../../styles/common/Product.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

@@ -1,8 +1,8 @@
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink, Link } from 'react-router-dom';
-import '../styles/common/Nav.css';
-import { ReactComponent as Circle } from "../svgfiles/circle.svg";
+import '../../styles/common/Nav.css';
+import { ReactComponent as Circle } from "../../svgfiles/circle.svg";
 
 export default function ProductNavigation({ category_id }) {
   /* 카테고리 id로 이름 넣어주기 */
