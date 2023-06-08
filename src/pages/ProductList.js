@@ -30,6 +30,7 @@ export default function ProductList({category_id}) {
   /* api로 상품 목록 받아오기 */
   const [products, setProducts] = useState([]);
   useEffect(() => {
+    console.log(category_id);
     axios.get(`/api/item/item_list/${category_id}`)
       .then((datas) => {
         setProducts(datas.data);
@@ -37,18 +38,19 @@ export default function ProductList({category_id}) {
   }, [setProducts]);
 
   console.log("여기");
-  console.log(products);
+  console.log(products.length);
 
   return (
     <>
       <Container>
         <Row>
-          <Col md={12} className="d-flex justify-content-center mt-5">{category_name}</Col>
+          <Col md={12} className="category_name d-flex justify-content-center mt-5">{category_name}</Col>
           <Col className="d-flex justify-content-center mt-3"><ProductNavigation category_id={category_id}/></Col>
         </Row>
         <Row className="item_list">
           {/* 상품 목록 */}
-          {products.map((product)=>{
+          {products.map((product, index)=>{
+            if(index==16) console.log("더보기");
             return <Product key={`key-${product.itemId}`} product={product}/>
           })}
         </Row>

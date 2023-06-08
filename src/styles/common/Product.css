@@ -20,7 +20,7 @@
 
 .product span{
     color: black;
-    font-weight: bold;
+    font-weight: 550;
     font-size: 18px;
     line-height: 29px;
     margin-bottom: 4px;
@@ -32,6 +32,9 @@
 }
 
 /* 상품 목록 */
+.category_name{
+    font-weight: bold;
+}
 .item_list{
     display: flex;
 }
